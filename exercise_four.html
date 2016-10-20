@@ -61,7 +61,7 @@
         var crying = true;
         
         
-        if (typeof(score) != "number") {
+        if (typeof(score) !== "number") {
             score = 500;
         }
         console.log(score);
@@ -75,7 +75,7 @@
             score = score - 77;
         }
         console.log(score);
-        if (is_in_tree === true && typeof(last_play) != "number") {
+        if (is_in_tree === true && typeof(last_play) !== "number") {
             score = score + 395;
         }
         console.log(score);
@@ -87,11 +87,18 @@
             score = score / 2;
          }
          console.log(score);
-        if (crying === true) { 
+        if (crying === true) 
+            // does nothing 
+                            { 
             score = score + 0;
         } else if (is_in_tree === false && has_ball === true) {
             score = score * 1.5;
         }
+        // if(!crying && has_ball && !is_in_tree) {
+        //    score = score * 1.5
+        //}
+
+
         console.log(score);
         
         if (typeof(last_play) === "number") {
